@@ -15,6 +15,7 @@ Inside of this Astro project, you'll see the following folders and files:
 ├── public/
 │   └── chandram.jpeg
 │   └── favicon.svg
+│   └── favicon.ico
 ├── src/
 │   ├── components/
 │   │   └── Footer.astro
