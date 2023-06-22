@@ -1,81 +1,109 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
+import SiteLayout from "../layouts/SiteLayout.astro";
 ---
 
-<Layout title="Welcome to Astro.">
-	<main>
-		<h1>Welcome to <span class="text-gradient">Astro</span></h1>
-		<p class="instructions">
-			To get started, open the directory <code>src/pages</code> in your project.<br />
-			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
-		</p>
-		<ul role="list" class="link-card-grid">
-			<Card
-				href="https://docs.astro.build/"
-				title="Documentation"
-				body="Learn how Astro works and explore the official API docs."
+<SiteLayout title="Daefolio">
+	<div class="w-full flex flex-col md:flex-row p-8">
+		<div
+			class="bg-fuchsia-400 rounded-xl border-4 border-black shadow-brutalism shadow-black md:mr-8 md:mb-0 mb-8 md:w-2/6 w-full"
+		>
+			<img
+				class="object-cover w-full h-full"
+				src="chandram.jpeg"
+				alt="My Image"
 			/>
-			<Card
-				href="https://astro.build/integrations/"
-				title="Integrations"
-				body="Supercharge your project with new frameworks and libraries."
-			/>
-			<Card
-				href="https://astro.build/themes/"
-				title="Themes"
-				body="Explore a galaxy of community-built starter themes."
-			/>
-			<Card
-				href="https://astro.build/chat/"
-				title="Community"
-				body="Come say hi to our amazing Discord community. ❤️"
-			/>
-		</ul>
-	</main>
-</Layout>
-
-<style>
-	main {
-		margin: auto;
-		padding: 1.5rem;
-		max-width: 60ch;
-	}
-	h1 {
-		font-size: 3rem;
-		font-weight: 800;
-		margin: 0;
-	}
-	.text-gradient {
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
-	}
-	.instructions {
-		line-height: 1.6;
-		margin: 1rem 0;
-		border: 1px solid rgba(var(--accent), 25%);
-		background-color: white;
-		padding: 1rem;
-		border-radius: 0.4rem;
-	}
-	.instructions code {
-		font-size: 0.875em;
-		font-weight: bold;
-		background: rgba(var(--accent), 12%);
-		color: rgb(var(--accent));
-		border-radius: 4px;
-		padding: 0.3em 0.45em;
-	}
-	.instructions strong {
-		color: rgb(var(--accent));
-	}
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 1rem;
-		padding: 0;
-	}
-</style>
+		</div>
+		<div
+			class="bg-orange-400 min-h-96 rounded-xl border-4 border-black shadow-brutalism shadow-black p-8 sm:p-12 md:w-4/6 w-full flex flex-col justify-center"
+		>
+			<h1 class="font-unbounded font-black text-3xl sm:text-6xl inline">
+				Hi! I am Chandram
+			</h1>
+			<h3 class="font-unbounded font-black sm:text-2xl inline">
+				a.k.a. Daedalus
+			</h3>
+			<p class="font-unbounded py-2 md:py-4 text-justify">
+				A Student and a Developer. I love to code 💻, swim 🏊‍♂️, cycle 🚲.
+				I primarily build mobile applications using Flutter or Swift. My
+				other skills include Rust 🦀, Java, Astro, Arduino and much
+				more. I have a Youtube Channel where I navigate people through
+				the tech domain. I often write blogs. I am an Apple Fanatic and
+				you can know a lot about me from my twitter.
+			</p>
+		</div>
+	</div>
+	<div class="w-full px-8 mb-8">
+		<div
+			class="bg-blue-400 w-full rounded-xl border-4 border-black shadow-brutalism shadow-black p-12 flex flex-col lg:flex-row justify-between items-center"
+		>
+			<h1 class="font-unbounded font-black text-3xl sm:text-6xl inline">
+				Socials
+			</h1>
+			<div class="flex flex-col md:flex-row items-center p-4">
+				<a
+					target="_blank"
+					rel="noopener noreferrer"
+					href="https://github.com/Chandram-Dutta"
+					class="font-unbounded font-bold px-2">GitHub</a
+				>
+				<a
+					target="_blank"
+					rel="noopener noreferrer"
+					href="https://twitter.com/ChandramDutta"
+					class="font-unbounded font-bold px-2">Twitter</a
+				>
+				<a
+					target="_blank"
+					rel="noopener noreferrer"
+					href="https://instagram.com/chandram.dutta"
+					class="font-unbounded font-bold px-2">Instagram</a
+				>
+			</div>
+		</div>
+		<div class="w-full flex flex-col md:flex-row pt-8">
+			<div
+				class="bg-red-500 rounded-xl border-4 border-black shadow-brutalism shadow-black md:mr-8 md:mb-0 mb-8 md:w-2/6 w-full p-12 flex flex-col lg:flex-row justify-center items-center"
+			>
+				<a
+					target="_blank"
+					rel="noopener noreferrer"
+					href="https://youtube.com/@chandramdutta"
+					class="font-unbounded font-bold px-2">Youtube</a
+				>
+			</div>
+			<div
+				class="bg-pink-500 grow rounded-xl border-4 border-black shadow-brutalism shadow-black md:mb-0 mb-8 md:w-3/6 w-full p-12 flex flex-col lg:flex-row justify-between items-center"
+			>
+				<h1
+					class="font-unbounded font-black text-3xl sm:text-6xl inline"
+				>
+					Blogs
+				</h1>
+				<div class="flex flex-col md:flex-row items-center p-4">
+					<a
+						target="_blank"
+						rel="noopener noreferrer"
+						href="https://chandramcodes.hashnode.dev"
+						class="font-unbounded font-bold px-2">Hashnode</a
+					>
+					<a
+						target="_blank"
+						rel="noopener noreferrer"
+						href="https://medium.com/@chandramdutta2004"
+						class="font-unbounded font-bold px-2">Medium</a
+					>
+				</div>
+			</div>
+			<div
+				class="bg-white rounded-xl border-4 border-black shadow-brutalism shadow-black md:ml-8 md:mb-0 mb-8 md:w-1/6 w-full p-12 flex flex-col lg:flex-row justify-center items-center"
+			>
+				<a
+					target="_blank"
+					rel="noopener noreferrer"
+					href="https://chandramdutta.substack.com/subscribe?utm_source=menu&simple=true&next=https%3A%2F%2Fchandramdutta.substack.com"
+					class="font-unbounded font-bold px-2">Substack</a
+				>
+			</div>
+		</div>
+	</div>
+</SiteLayout>
